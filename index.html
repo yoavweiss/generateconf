@@ -353,7 +353,7 @@
                     </aside>
                 </section>
                 <section data-background="cc_resources/shipping.jpg">
-                    <h1 class=bright>Shipping in Chrome 38</h1>
+                    <h1 class=bright>Shipped in Chrome 38</h1>
                     <div class="credits bottom bright"><a href="https://www.flickr.com/photos/luchilu/2183156848">https://www.flickr.com/photos/luchilu/2183156848</a></div>
                 </section>
                 <section data-background="cc_resources/group.jpg">
@@ -396,18 +396,8 @@
                     <p><img src="resources/dpr_selection.jpg"></p>
                     <div class="credits bright"><a href="http://usecases.responsiveimages.org/">http://usecases.responsiveimages.org/</a></div>
                     <aside class="notes">
+                        <p>Load fixed width high resolution images only on high resolution devices</p>
                         Note that this is impacting all Websites. Not just responsive ones.
-                    </aside>
-                </section>
-                <section>
-                    <h2>The syntax</h2>
-                    <pre><code data-trim data-noescape>
-&lt;img src=<span class=highlight>"1x.jpg" 
-    srcset="2x.jpg 2x, 3x.jpg 3x"</span> 
-     alt="The president."&gt;
-                    </code></pre>
-                    <aside class="notes">
-                        You can mix srcset's x descriptor with the overall picture syntax
                     </aside>
                 </section>
                 <section>
@@ -418,6 +408,17 @@
                     <iframe src="cat_on_phone.html" width="400px" height="800px"></iframe>
                 </section>
                 <section>
+                    <h2>The syntax</h2>
+                    <pre><code data-trim data-noescape>
+&lt;img src=<span class=highlight>"1x.jpg" 
+    srcset="2x.jpg 2x, 2.6x.jpg 2.6x"</span> 
+     alt="A cat. On the phone."&gt;
+                    </code></pre>
+                    <aside class="notes">
+                        You can mix srcset's x descriptor with the overall picture syntax
+                    </aside>
+                </section>
+                <section>
                     <h1>The &lt;picture&gt; part</h1>
                 </section>
                 <section>
@@ -426,40 +427,6 @@
                     <img src="cc_resources/art-direction-after.png" style="border: white; width: 500px">
                     <div class="credits">
                         <a href="http://www.html5rocks.com/en/tutorials/responsive/picture-element/">http://www.html5rocks.com/en/tutorials/responsive/picture-element/</a></div>
-                </section>
-                <section>
-                    <h2>Use case #2 - MIME type fallback</h2>
-                    <img src="resources/kodak-rgbssim-fs-ratio.png">
-                    <div class="credits"><a href="https://people.mozilla.org/~josh/lossy_compressed_image_study_october_2013/">https://people.mozilla.org/~josh/lossy_compressed_image_study_october_2013/</a></div>
-
-                    <aside class="notes">
-                        <p>Today's Web have become fragmented when it comes to image formats.</p>
-                        <p>We may not like it, but that's the truth :(</p>
-                        <p>Picture will enable us to have client-side mime type fallback if we're using browser specific image formats, 
-                        just like all other resources which they're type may or may not be supported (e.g. video, fonts).</p>
-                        <p>Note that it doesn't mean that you can't do server-side content negotiation using the accept header, if that's your
-                        thing</p>
-                        <p>But client-side may be more accessible to Web developers that can't mess around with their backend, and it
-                        has caching advantages.</p>
-                    </aside>
-                </section>
-                <section>
-                    <h2>The syntax</h2>
-                    <pre><code data-trim data-noescape>
-<span class=highlight>&lt;picture&gt;</span>
-     <span class=highlight>&lt;source media="(min-width: 45em)"</span> 
-               srcset="large.jpg"&gt;
-     <span class=highlight>&lt;source media="(min-width: 18em)"</span> 
-               srcset="medium.jpg"&gt;
-     &lt;img src="small.jpg" alt="The president."&gt;
-<span class=highlight>&lt;/picture&gt;</span>
-                    </code></pre>
-                    <aside class="notes">
-                        <p>Here you can see the syntax parts that make up the "picture" part of the spec, namely the picture element and its
-                        source children. </p>
-                        <p>Each one of the source children, as well as the img child define an image that fits into a certain
-                        responsive breakpoint.</p>
-                    </aside>
                 </section>
                 <section>
                     <p>
@@ -490,7 +457,41 @@
                     <div class="credits"><a href="http://usecases.responsiveimages.org/">http://usecases.responsiveimages.org/</a></div>
                 </section>
                 <section>
-                    <h2>Mime type fallback</h2>
+                    <h2>The syntax</h2>
+                    <pre><code data-trim data-noescape>
+<span class=highlight>&lt;picture&gt;</span>
+     <span class=highlight>&lt;source media="(min-width: 45em)"</span> 
+               srcset="large.jpg"&gt;
+     <span class=highlight>&lt;source media="(min-width: 18em)"</span> 
+               srcset="medium.jpg"&gt;
+     &lt;img src="small.jpg" alt="The president."&gt;
+<span class=highlight>&lt;/picture&gt;</span>
+                    </code></pre>
+                    <aside class="notes">
+                        <p>Here you can see the syntax parts that make up the "picture" part of the spec, namely the picture element and its
+                        source children. </p>
+                        <p>Each one of the source children, as well as the img child define an image that fits into a certain
+                        responsive breakpoint.</p>
+                    </aside>
+                </section>
+                <section>
+                    <h2>Use case #2 - MIME type fallback</h2>
+                    <img src="resources/kodak-rgbssim-fs-ratio.png">
+                    <div class="credits"><a href="https://people.mozilla.org/~josh/lossy_compressed_image_study_october_2013/">https://people.mozilla.org/~josh/lossy_compressed_image_study_october_2013/</a></div>
+
+                    <aside class="notes">
+                        <p>Today's Web have become fragmented when it comes to image formats.</p>
+                        <p>We may not like it, but that's the truth :(</p>
+                        <p>Picture will enable us to have client-side mime type fallback if we're using browser specific image formats, 
+                        just like all other resources which they're type may or may not be supported (e.g. video, fonts).</p>
+                        <p>Note that it doesn't mean that you can't do server-side content negotiation using the accept header, if that's your
+                        thing</p>
+                        <p>But client-side may be more accessible to Web developers that can't mess around with their backend, and it
+                        has caching advantages.</p>
+                    </aside>
+                </section>
+                <section>
+                    <h2>Mime type fallback syntax</h2>
                     <pre><code data-trim data-noescape>
 <span class=highlight>&lt;picture&gt;</span>
      <span class=highlight>&lt;source type="image/webp"</span> 
@@ -522,28 +523,56 @@
                     <div class="credits"><a href="http://24ways.org/2012/responsive-images-what-we-thought-we-needed/">http://24ways.org/2012/responsive-images-what-we-thought-we-needed/</a></div>
                 </section>
                 <section>
+                    <iframe src="cat_on_phone_flex.html" width="1200px" height="800px"></iframe>
+                    <div class="credits"><a href="https://www.flickr.com/photos/joshsemans/3595245177">https://www.flickr.com/photos/joshsemans/3595245177</a></div>
+                </section>
+                <section>
+                    <iframe src="cat_on_phone_flex.html" width="400px" height="800px"></iframe>
+                </section>
+                <section>
                     <h2>The syntax</h2>
                     <pre><code data-trim data-noescape>
 &lt;img src="otherpic.jpg" 
-     alt="The president giving an award."
-     sizes=<span class=highlight>"(max-width: 30em) 100vw, 
-          (max-width: 50em) 50vw, 
-          calc(33vw - 100px)"</span>
-     srcset="<span class=highlight>pic100.jpg 100w</span>, 
-             pic200.jpg 200w, pic400.jpg 400w, 
-             pic800.jpg 800w, pic1600.jpg 1600w, 
-             pic3200.jpg 3200w"&gt;
+     sizes=<span class=highlight>"50vw"</span>
+     srcset="<span class=highlight>cat100.jpg 100w</span>, 
+             cat200.jpg 200w, cat400.jpg 400w,
+             cat800.jpg 800w, cat1600.jpg 1600w"
+     alt="A cat. On the phone."&gt;
                     </code></pre>
                     <aside class="notes">
                     <h2>Didn't add an example,so go over this example in length!</h2>
                     </aside>
                 </section>
                 <section>
-                    <iframe src="cat_on_phone_flex.html" width="1200px" height="800px"></iframe>
-                    <div class="credits"><a href="https://www.flickr.com/photos/joshsemans/3595245177">https://www.flickr.com/photos/joshsemans/3595245177</a></div>
+                    <iframe src="cat_on_phone_full_sizes.html" width="400px" height="800px"></iframe>
                 </section>
                 <section>
-                    <iframe src="cat_on_phone_flex.html" width="400px" height="800px"></iframe>
+                    <iframe src="cat_on_phone_full_sizes.html" width="800px" height="800px"></iframe>
+                </section>
+                <section>
+                    <iframe src="cat_on_phone_full_sizes.html" width="1200px" height="800px"></iframe>
+                </section>
+                <section>
+                    <h2>The syntax</h2>
+                    <pre><code data-trim data-noescape>
+&lt;img src="otherpic.jpg" 
+     sizes=<span class=highlight>"(max-width: 30em) 100vw, 
+          (max-width: 50em) 50vw, 
+          calc(33vw - 100px)"</span>
+     srcset="<span class=highlight>cat100.jpg 100w</span>, 
+             cat200.jpg 200w, cat400.jpg 400w, 
+             cat800.jpg 800w, cat1600.jpg 1600w"
+     alt="A cat. On the phone."&gt;
+                    </code></pre>
+                    <aside class="notes">
+                    <h2>Didn't add an example,so go over this example in length!</h2>
+                    </aside>
+                </section>
+                <section>
+                    <h1>`sizes` is an optimization</h1>
+                    <aside class="notes">
+                        If you can't be bothered with it, just specifying multiple resources would also give you benefit.
+                    </aside>
                 </section>
                 <section>
                     <h2>All together now</h2>
@@ -555,17 +584,14 @@
             srcset="fixed_with_bg.1x.jpg 1x, 
                     fixed_with_bg.2x.jpg 2x"&gt;
     &lt;img src="otherpic.jpg" 
-         alt="The president giving an award."
          sizes="(max-width: 30em) 100vw, 
                 (max-width: 50em) 50vw, 
                 calc(33vw - 100px)"
-         srcset="pic100.jpg 100w, pic200.jpg 200w, 
-                 pic400.jpg 400w, ..." &gt;
+         srcset="cat100.jpg 100w, cat200.jpg 200w, 
+                 cat400.jpg 400w, ..."
+         alt="A cat. On the phone."&gt;
 &lt;/picture&gt;
                     </code></pre>
-                </section>
-                <section>
-                    <h1>&lt;/syntax&gt;</h1>
                 </section>
                 <section>
                     <h1>&lt;support&gt;</h1>
