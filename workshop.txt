@@ -1,0 +1,42 @@
+Intro - 9:00
+* Who am I, the goal of the workshop, etc - 5 minutes
+* Who are the attendees, previous experience, & what are they expecting - 10 minutes
+* The year is 2010 - let's resolve responsive images - 30 minutes
+* A trip down memory lane - 10 minutes
+* Use cases - 5 minutes about use-cases, the docs, etc
+* DPR - Explanations, examples, etc - 10 minutes
+* Variable width - explanation, examples for 100vw - 10 minutes
+* Variable width - explanation, examples 50vw - 10 minutes
+
+Break - 10:30
+
+Continued - 11:00
+* Variable width - multi-breakpoint examples -10 minutes
+* art-direction - 10 minutes
+* mime type switching - 10 minutes
+* Gotchas - 30 minutes
+* What's wrong with this picture? 10 minutes
+* image-set's future? 10 minutes
+* Client Hints & responsive images container - 10 minutes
+* Lazy loading of images - 10 minutes
+
+Lunch - 12:30
+
+Afternoon - 13:30
+* Image Optimization 101 - 30 minutes
+* Tell me about your image optimization flow - 10 minutes
+* Image optimization exercise - 30 minutes
+* Talk about integrating image optimization into your flow - 20 minutes
+
+Break - 15:00
+
+Final - 15:30
+* Responsify an RWD site with plenty of images & Measure the results - 60 minutes
+* Getting involved in standards - 20 minutes
+* Questions and wrap up of the day
+17:00 - beers!!!
+
+* Responsive loading of other resource types (JS/CSS/Fonts)
+
+
+
