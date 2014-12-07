@@ -24,8 +24,8 @@ Lunch - 12:30
 
 Afternoon - 13:30
 * Image Optimization 101 - 30 minutes
-* Tell me about your image optimization flow - 10 minutes
 * Image optimization exercise - 30 minutes
+* Tell me about your image optimization flow - 10 minutes
 * Talk about integrating image optimization into your flow - 20 minutes
 
 Break - 15:00
