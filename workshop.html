@@ -558,6 +558,28 @@
                 </section>
                 <section>
                     <h2>That can't be right...</h2>
+                    <aside class="notes">
+                        Now you figure out the right syntax to get the above
+                    </aside>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+&lt;img src="otherpic.jpg" 
+     sizes=<span class=highlight>"(min-width: 1200px) 235px,
+          (min-width: 641px) 24vw,
+          (min-width: 470px) 235px,
+          50vw"</span>
+     srcset="<span class=highlight>thumb100.jpg 100w</span>, 
+             thumb200.jpg 200w, thumb235.jpg 235w, 
+             thumb470.jpg 470w"
+     alt="Some animal."&gt;
+                    </code></pre>
+                    <aside class="notes">
+                    <h2>Didn't add an example,so go over this example in length!</h2>
+                    </aside>
+                </section>
+                <section>
+                    <h2>Separation of concerns?</h2>
                 </section>
                 <section>
                     <h1>Use case</h1><h1>Art direction</h1>
@@ -679,40 +701,57 @@
                     <h2>&lt;support&gt;</h2>
                 </section>
                 <section>
-                    <h1>Blink - Chrome &amp; Opera</h1>
+                    <div style="height: 400px">
+                        <img style="border: none" src="cc_resources/chrome.png">
+                        <img style="border: none" src="cc_resources/opera.png">
+                    </div>
                     <aside class="notes">
-                        (fragments)
-                        <p>I started out by implementing srcset's x descriptor. It shipped in Chrome/Opera stable a few months back.</p>
-                        <p>sizes and the 'w' descriptor in srcset are done. I'll probably aim to ship it in M37</p>
-                        <p>picture work has started and is moving along nicely - Christian is helping with stable state</p>
-                    Implemention (almost) done!
-                    srcset 'x' descriptor already shipped
-                    sizes and srcset - behind a flag
-                    picture - almost done
-                    Hopefully shipping soon!
+                        Shipped in M38!
                     </aside>
                 </section>
                 <section>
-                    <h1>Firefox</h1>
+                    <div style="height: 400px">
+                        <img style="border: none" src="cc_resources/firefox.png">
+                    </div>
                     <aside class="notes">
-                    Planned to ship in Firefox 33!!!
-                        John Schoenick from Mozilla is currently working on it. Likely to hit the dev version soon.
+                        Implemented but not yet preffed on, because of bugs.
+                        I hope it'd get worked on soon.
                     </aside>
                 </section>
                 <section>
-                    <h2>IE</h2>
+                    <div style="height: 400px">
+                        <img style="border: none" src="cc_resources/ie.png">
+                    </div>
                     <aside class="notes">
-                    Showing interest
-                        <p>They're showing up on IRC and mailing lists, asking good questions.</p>
+                        Implemented srcsetX. Hopefully more to come soon.
                     </aside>
                 </section>
                 <section>
-                    <h2>WebKit</h2>
+                    <div style="height: 400px">
+                        <img style="border: none" src="cc_resources/safari.png">
+                    </div>
                     <aside class="notes">
                     <p >Implemented &amp; shipped srcset's 'x' descriptor</p>
                     <p >sizes and srcset are fully implemented</p>
                     <p >Some infra is missing for picture, but I'll work on it soon</p>
                     </aside>
+                </section>
+                <section>
+                    <h2>srcset 'w' usage</h2>
+                    <img src="resources/usage_srcsetW.png">
+                </section>
+                <section>
+                    <h2>&lt;picture&gt; usage</h2>
+                    <img src="resources/usage_picture.png">
+                </section>
+                <section>
+                    <h2>srcset 'x' usage</h2>
+                    <img src="resources/usage_srcsetX.png">
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
+                    <img src="resources/srcsetX_tweet.png">
                 </section>
                 <section>
                     <h2>&lt;/support&gt;</h2>

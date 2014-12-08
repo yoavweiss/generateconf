@@ -65,237 +65,40 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>Image compression 101</h1>
+                    <h1>Getting involved in standards</h1>
                     <aside class="notes">
                     </aside>
                 </section>
                 <section>
-                    <h1>Image formats</h1>
+                    <h2>I'm just some dude</h2>
                 </section>
                 <section>
-                    <h2>GIF</h2>
+                    <h2>We're all outnumbered</h2>
+                    <img src="resources/outnumbered.jpg">
                 </section>
                 <section>
-                    <img src="resources/buzzznes.gif">
+                    <h2>Find something that's broken on the Web platform and you want fixed</h2>
                 </section>
                 <section>
-                    <h2>JPEG</h2>
+                    <h2>Find like-minded folks</h2>
                 </section>
                 <section>
-                    <img src="cc_resources/jpeg_cat_quality_change.png">
-                    <aside class="notes">
-                        God for real life photos. 8x8 blocks. Been around since early 90s
-                    </aside>
+                    <h2>WHATWG vs. W3C?</h2>
                 </section>
                 <section>
-                    <h2>No alpha channel</h2>
+                    <h2>Mailing lists</h2>
                 </section>
                 <section>
-                    <h2>Lossy compression</h2>
-                    <aside class="notes">
-                        Converts color to frequencies, gets rids of high frequencies, entropy coding for the rest
-                    </aside>
+                    <h2>Lurk on IRC</h2>
                 </section>
                 <section>
-                    <h2>PNG</h2>
+                    <h2>GitHub</h2>
                 </section>
                 <section>
-                    <h2>Multiple variants</h2>
-                    <aside class="notes">
-                        color types.
-                        The format is based on gzip, so it compresses continous changes better. (so CG images)
-                    </aside>
+                    <h2>Get involved in browsers</h2>
                 </section>
                 <section>
-                    <h2>Lossless</h2>
-                </section>
-                <section>
-                    <img src="cc_resources/Comparison_of_JPEG_and_PNG.png">
-                </section>
-                <section>
-                    <h2>PNG8</h2>
-                    <aside class="notes">
-                        PNG 8 - includes up to 256 colors. Can have a full alpha channel 
-                        Define a color palette, and then each pixel references a color number.
-                    </aside>
-                </section>
-                <section>
-                    <h2>PNG24</h2>
-                    <aside class="notes">
-                        PNG 24 - Each pixel can be a separate color (defined up to 24 bits precision + 8 bit alpha).
-                    </aside>
-                </section>
-                <section>
-                    <h2>Alpha Channel</h2>
-                    <img src="cc_resources/PNG_transparency.png">
-                    <aside class="notes">
-                        Unlike JPEG, the format supports a full alpha channel!!!
-                    </aside>
-                </section>
-                <section>
-                    <h2>SVG</h2>
-                    <aside class="notes">
-                        Scalable Vector Graphics. An ideal solution for respimg!!!
-                    </aside>
-                </section>
-                <section>
-                    <img src="cc_resources/svg.png">
-                </section>
-                <section>
-                    <h2>CG, not photos</h2>
-                    <aside class="notes">
-                        It is great for computer generated graphics, but not so for real-life photos (even though it can embed them).
-                    </aside>
-                </section>
-                <section>
-                    <h2>Markup based</h2>
-                    <aside class="notes">
-                        So human readable/writable. OTOH, needs to be minified/gzipped.
-                    </aside>
-                </section>
-                <section>
-                    <h2>Compare size vs. PNG</h2>
-                    <aside class="notes">
-                        often, for small graphics, PNG can be smaller than the SVG equiv.
-                    </aside>
-                </section>
-                <section>
-                    <h2>Not pixel perfect</h2>
-                    <aside class="notes">
-                        But there's an SVG hinting spec being worked on
-                    </aside>
-                </section>
-                <section>
-                    <h2>WebP</h2>
-                    <aside class="notes">
-                        Google introduced it a few years back. Based on VP8 video.
-                    </aside>
-                </section>
-                <section>
-                    <h2>Both lossy and lossless</h2>
-                </section>
-                <section>
-                    <h2>Supports animation, alpha</h2>
-                    <aside class="notes">
-                        Funny for a ex video format
-                    </aside>
-                </section>
-                <section>
-                    <h2>Novelties</h2>
-                    <img src="cc_resources/compression-webp_lossy.png">
-                    <aside class="notes">
-                        It offers better compression because of predictive coding, variable size blocks, and applying different compression
-                        levels to different parts of the image.
-                    </aside>
-                </section>
-                <section>
-                    <h2>Poor cross-browser adoption</h2>
-                    <aside class="notes">
-                        Mozilla are not convinced that the format is significantly better. Working on improving JPEG encoders.
-                    </aside>
-                </section>
-                <section>
-                    <h2>JPEG-XR</h2>
-                    <aside class="notes">
-                        Microsoft's attempt to improve image formats. Better at HD images, but less so for the Web
-                    </aside>
-                </section>
-                <section>
-                    <h2>JPEG-XT</h2>
-                    <aside class="notes">
-                        <p>A backwards compatible attempt to add features to JPEG</p>
-                        <p>Alpha channel, lossless</p>
-                        <p>Combined with better encoders, might be good enough</p>
-                    </aside>
-                </section>
-                <section>
-                    <h2>Compression methods</h2>
-                </section>
-                <section>
-                    <h2>Lossless compression</h2>
-                    <aside class="notes">
-                        Gets rid of meta data, better lossless compression even on the lossy formats
-                    </aside>
-                </section>
-                <section>
-                    <h2>Lossy compression</h2>
-                    <aside class="notes">
-                        Drops quality in favor of smaller file size. Can be applied to lossless formats as well.
-                    </aside>
-                </section>
-                <section>
-                    <h2>Finding the ideal format</h2>
-                    <aside class="notes">
-                        <p>PNG vs SVG</p>
-                        <p>Alpha on photos</p>
-                    </aside>
-                </section>
-                <section>
-                    <h2>Resizing!</h2>
-                    <aside class="notes">
-                        <p>It's complicated!!!</p>
-                        <p>Maintain aspect ratio</p>
-                        <p>Try cutting pixels down in half</p>
-                    </aside>
-                </section>
-                <section>
-                    <h2>Lossy recompression</h2>
-                    <aside class="notes">
-                        <p>recompression of JPEGs</p>
-                        <p>Blur/color-reduce PNGs</p>
-                    </aside>
-                </section>
-                <section>
-                    <h2>Lossless recompression</h2>
-                    <aside class="notes">
-                        <p>Remove meta data</p>
-                        <p>Optimize huffman, zopfli, progressive JPEG</p>
-                    </aside>
-                </section>
-                <section>
-                    <h2>Measure lossiness with SSIM</h2>
-                    <aside class="notes">
-                        <p>Structural similarity.</p>
-                    </aside>
-                </section>
-                <section>
-                    <h2>Tools</h2>
-                </section>
-                <section>
-                    <h2>ImageMagick</h2>
-                    <aside class="notes">
-                        Great for resizing 
-                    </aside>
-                </section>
-                <section>
-                    <h2>MozJPEG</h2>
-                    <aside class="notes">
-                        Probably the best JPEG encoder today, so great for format conversions to JPEG, and JPEG recompression
-                    </aside>
-                </section>
-                <section>
-                    <h2>PNGQuant</h2>
-                </section>
-                <section>
-                    <h2><del>imgmin</del></h2>
-                </section>
-                <section>
-                    <h2>dssim</h2>
-                </section>
-                <section>
-                    <h2>ImageOptim</h2>
-                </section>
-                <section>
-                    <h2>sizersoze.org</h2>
-                </section>
-                <section>
-                    <h2>Excercise time!!!</h2>
-                    <aside class="notes">
-                        ~14:00-14:30
-                    </aside>
-                </section>
-                <section>
-                    <h2>Flow</h2>
+                    <h2>Make shit happen!!!</h2>
                 </section>
                 <!--
                 <section>

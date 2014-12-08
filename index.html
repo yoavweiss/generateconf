@@ -36,6 +36,7 @@
             .reveal h1.bright, .reveal h2.bright { padding-bottom: 20px; }
             code span.highlight {font-weight: bold; font-size: 1.2em;}
             .reveal pre code {font-size: 2em; line-height: 1.5em; max-height: 800px;}
+            div.imgcontainer { margin-top: -150px; }
             h1.large { font-size: 8em; }
 
             // Thanks to http://stackoverflow.com/questions/2539207/how-to-change-the-strike-out-line-through-thickness-in-css
@@ -376,13 +377,6 @@
                     <h1>&lt;syntax&gt;</h1>
                 </section>
                 <section>
-                    <h1>Picture 2.0&trade;</h1>
-                    <!-- frankenstein things -->
-                    <aside class="notes">
-                        <p>Let's take a closer look at each one of the parts combining the latest spec.</p>
-                    </aside>
-                </section>
-                <section>
                     <h1>The srcset 'x' part</h1>
                     <aside class="notes">
                         <p>The oldest part of the spec, goes back to the WHAWG 2012 days</p>
@@ -401,24 +395,20 @@
                     </aside>
                 </section>
                 <section>
-                    <h1>Example</h1>
+                    <div class=imgcontainer>
+                        <img src="resources/smashing_600_dpr.png">
+                    </div>
                 </section>
                 <section>
-                    <h1>IANAD</h1>
+                    <div class=imgcontainer>
+                        <img src="resources/smashing_1200_dpr.png">
+                    </div>
                 </section>
                 <section>
-                    <iframe src="cat_on_phone.html" width="1200px" height="800px"></iframe>
-                    <div class="credits"><a href="https://www.flickr.com/photos/joshsemans/3595245177">https://www.flickr.com/photos/joshsemans/3595245177</a></div>
-                </section>
-                <section>
-                    <iframe src="cat_on_phone.html" width="400px" height="800px"></iframe>
-                </section>
-                <section>
-                    <h2>The syntax</h2>
                     <pre><code data-trim data-noescape>
 &lt;img src=<span class=highlight>"1x.jpg" 
     srcset="2x.jpg 2x, 2.6x.jpg 2.6x"</span> 
-     alt="A cat. On the phone."&gt;
+     alt="A giraffe."&gt;
                     </code></pre>
                     <aside class="notes">
                         You can mix srcset's x descriptor with the overall picture syntax
@@ -433,6 +423,20 @@
                     <img src="cc_resources/art-direction-after.png" style="border: white; width: 500px">
                     <div class="credits">
                         <a href="http://www.html5rocks.com/en/tutorials/responsive/picture-element/">http://www.html5rocks.com/en/tutorials/responsive/picture-element/</a></div>
+                </section>
+                <section>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_sloth_1600.png">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_sloth_640.png" width=600px>
+                    </div>
+                    <aside class="notes">
+                    </aside>
                 </section>
                 <section>
                     <p>
@@ -463,7 +467,6 @@
                     <div class="credits"><a href="http://usecases.responsiveimages.org/">http://usecases.responsiveimages.org/</a></div>
                 </section>
                 <section>
-                    <h2>The syntax</h2>
                     <pre><code data-trim data-noescape>
 <span class=highlight>&lt;picture&gt;</span>
      <span class=highlight>&lt;source media="(min-width: 45em)"</span> 
@@ -529,61 +532,114 @@
                     <div class="credits"><a href="http://24ways.org/2012/responsive-images-what-we-thought-we-needed/">http://24ways.org/2012/responsive-images-what-we-thought-we-needed/</a></div>
                 </section>
                 <section>
-                    <iframe src="cat_on_phone_flex_header.html" width="1200px" height="800px"></iframe>
-                    <div class="credits"><a href="https://www.flickr.com/photos/joshsemans/3595245177">https://www.flickr.com/photos/joshsemans/3595245177</a></div>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_variable_panda_1200.png">
+                    </div>
                 </section>
                 <section>
-                    <iframe src="cat_on_phone_flex_header.html" width="400px" height="800px"></iframe>
-                    <div class="credits"><a href="https://www.flickr.com/photos/joshsemans/3595245177">https://www.flickr.com/photos/joshsemans/3595245177</a></div>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_variable_panda_600.png">
+                    </div>
                 </section>
                 <section>
-                    Add a syntax example here!!!!!!!!
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_variable_panda_300.png">
+                    </div>
                 </section>
                 <section>
-                    <iframe src="cat_on_phone_flex.html" width="1200px" height="800px"></iframe>
-                    <div class="credits"><a href="https://www.flickr.com/photos/joshsemans/3595245177">https://www.flickr.com/photos/joshsemans/3595245177</a></div>
-                </section>
-                <section>
-                    <iframe src="cat_on_phone_flex.html" width="400px" height="800px"></iframe>
-                </section>
-                <section>
-                    <h2>The syntax</h2>
                     <pre><code data-trim data-noescape>
-&lt;img src="otherpic.jpg" 
-     sizes=<span class=highlight>"50vw"</span>
-     srcset="<span class=highlight>cat100.jpg 100w</span>, 
-             cat200.jpg 200w, cat400.jpg 400w,
-             cat800.jpg 800w, cat1600.jpg 1600w"
-     alt="A cat. On the phone."&gt;
+&lt;img src="panda.jpg" 
+     sizes=<span class=highlight>"100vw"</span>
+     srcset="<span class=highlight>panda200.jpg 200w</span>, 
+             panda400.jpg 400w, panda800.jpg 800w,
+             panda1200.jpg 1200w, panda2400.jpg 2400w"
+     alt="A panda."&gt;
+                    </code></pre>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+&lt;img src="panda.jpg" 
+     srcset="<span class=highlight>panda200.jpg 200w</span>, 
+             panda400.jpg 400w, panda800.jpg 800w,
+             panda1200.jpg 1200w, panda2400.jpg 2400w"
+     alt="A panda."&gt;
+                    </code></pre>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
+                    <div class=imgcontainer>
+                        <img src="resources/bg_1200_38%.png">
+                    </div>
+                </section>
+                <section>
+                    <div class=imgcontainer>
+                        <img src="resources/bg_800_44%.png">
+                    </div>
+                </section>
+                <section>
+                    <div class=imgcontainer>
+                        <img src="resources/bg_480_42%.png">
+                    </div>
+                </section>
+                <section>
+                    <pre><code data-trim data-noescape>
+&lt;img src="senator.jpg" 
+     sizes=<span class=highlight>"44vw"</span>
+     srcset="<span class=highlight>senator200.jpg 200w</span>, 
+             senator400.jpg 400w, senator800.jpg 800w,
+             senator1200.jpg 1200w, senator2400.jpg 2400w"
+     alt="A senator."&gt;
                     </code></pre>
                     <aside class="notes">
                     <h2>Didn't add an example,so go over this example in length!</h2>
                     </aside>
                 </section>
                 <section>
-                    <iframe src="cat_on_phone_full_sizes.html" width="400px" height="800px"></iframe>
+                    <h2>But wait, there's more</h2>
+                    <aside class="notes">
+                    </aside>
                 </section>
                 <section>
-                    <iframe src="cat_on_phone_full_sizes.html" width="800px" height="800px"></iframe>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_thumbnails_1200.png">
+                    </div>
                 </section>
                 <section>
-                    <iframe src="cat_on_phone_full_sizes.html" width="1200px" height="800px"></iframe>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_thumbnails_650.png">
+                    </div>
                 </section>
                 <section>
-                    <h2>The syntax</h2>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_thumbnails_600.png">
+                    </div>
+                </section>
+                <section>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_thumbnails_300.png">
+                    </div>
+                </section>
+                <section>
                     <pre><code data-trim data-noescape>
-&lt;img src="otherpic.jpg" 
-     sizes=<span class=highlight>"(max-width: 30em) 100vw, 
-          (max-width: 50em) 50vw, 
-          calc(33vw - 100px)"</span>
-     srcset="<span class=highlight>cat100.jpg 100w</span>, 
-             cat200.jpg 200w, cat400.jpg 400w, 
-             cat800.jpg 800w, cat1600.jpg 1600w"
-     alt="A cat. On the phone."&gt;
+&lt;img src="thumb.jpg" 
+     sizes=<span class=highlight>"(min-width: 1200px) 235px,
+          (min-width: 641px) 24vw,
+          (min-width: 470px) 235px,
+          50vw"</span>
+     srcset="<span class=highlight>thumb100.jpg 100w</span>, 
+             thumb200.jpg 200w, thumb235.jpg 235w, 
+             thumb470.jpg 470w"
+     alt="Some animal."&gt;
                     </code></pre>
                     <aside class="notes">
                     <h2>Didn't add an example,so go over this example in length!</h2>
                     </aside>
+                </section>
+                <section>
+                    <h2>Separation of concerns?</h2>
                 </section>
                 <section>
                     <h1>`sizes` is an optimization</h1>
@@ -595,20 +651,50 @@
                     <h2>All together now</h2>
                 </section>
                 <section>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_sloth_1600.png">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_sloth_641.png">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_sloth_640.png">
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
+                    <div class=imgcontainer>
+                        <img src="resources/wwf_sloth_320.png"> 
+                    </div>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
                     <pre><code data-trim data-noescape>
 &lt;picture&gt;
-    &lt;source media="(min-width: 80em)"
-            srcset="fixed_with_bg.1x.jpg 1x, 
-                    fixed_with_bg.2x.jpg 2x"&gt;
-    &lt;img src="otherpic.jpg" 
-         sizes="(max-width: 30em) 100vw, 
-                (max-width: 50em) 50vw, 
-                calc(33vw - 100px)"
-         srcset="cat100.jpg 100w, cat200.jpg 200w, 
-                 cat400.jpg 400w, ..."
-         alt="A cat. On the phone."&gt;
+    &lt;source media="(min-width: 641px)"
+            sizes="(max-width: 1600px) 100vw,
+                   1600px"
+            srcset="sloth_bg_640.jpg 640w,
+                    sloth_bg_960.jpg 960w, ..."&gt;
+    &lt;img src="sloth.jpg" 
+         srcset="sloth_160.jpg 160w, 
+                 sloth_320.jpg 320w, ..."
+         alt="A rad sloth."&gt;
 &lt;/picture&gt;
                     </code></pre>
+                </section>
+                <section>
+                    <h1>&lt;/syntax&gt;</h1>
                 </section>
                 <section>
                     <h1>&lt;support&gt;</h1>
@@ -619,15 +705,7 @@
                         <img style="border: none" src="cc_resources/opera.png">
                     </div>
                     <aside class="notes">
-                        (fragments)
-                        <p>I started out by implementing srcset's x descriptor. It shipped in Chrome/Opera stable a few months back.</p>
-                        <p>sizes and the 'w' descriptor in srcset are done. I'll probably aim to ship it in M37</p>
-                        <p>picture work has started and is moving along nicely - Christian is helping with stable state</p>
-                    Implemention (almost) done!
-                    srcset 'x' descriptor already shipped
-                    sizes and srcset - behind a flag
-                    picture - almost done
-                    Hopefully shipping soon!
+                        Shipped in M38!
                     </aside>
                 </section>
                 <section>
@@ -635,8 +713,8 @@
                         <img style="border: none" src="cc_resources/firefox.png">
                     </div>
                     <aside class="notes">
-                    Planned to ship in Firefox 33!!!
-                        John Schoenick from Mozilla is currently working on it. Likely to hit the dev version soon.
+                        Implemented but not yet preffed on, because of bugs.
+                        I hope it'd get worked on soon.
                     </aside>
                 </section>
                 <section>
@@ -644,8 +722,7 @@
                         <img style="border: none" src="cc_resources/ie.png">
                     </div>
                     <aside class="notes">
-                    Showing interest
-                        <p>They're showing up on IRC and mailing lists, asking good questions.</p>
+                        Implemented srcsetX. Hopefully more to come soon.
                     </aside>
                 </section>
                 <section>
@@ -659,7 +736,21 @@
                     </aside>
                 </section>
                 <section>
-                    <h1>&lt;/syntax&gt;</h1>
+                    <h2>srcset 'w' usage</h2>
+                    <img src="resources/usage_srcsetW.png">
+                </section>
+                <section>
+                    <h2>&lt;picture&gt; usage</h2>
+                    <img src="resources/usage_picture.png">
+                </section>
+                <section>
+                    <h2>srcset 'x' usage</h2>
+                    <img src="resources/usage_srcsetX.png">
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
+                    <img src="resources/srcsetX_tweet.png">
                 </section>
                 <section>
                     <h1>&lt;/support&gt;</h1>
