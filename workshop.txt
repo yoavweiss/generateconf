@@ -25,13 +25,13 @@ Lunch - 12:30
 Afternoon - 13:30
 * Image Optimization 101 - 30 minutes
 * Image optimization exercise - 30 minutes
+* Responsify an RWD site with plenty of images & Measure the results - 60 minutes
+
+Break - 15:30
+
+Final - 16:00
 * Tell me about your image optimization flow - 10 minutes
 * Talk about integrating image optimization into your flow - 20 minutes
-
-Break - 15:00
-
-Final - 15:30
-* Responsify an RWD site with plenty of images & Measure the results - 60 minutes
 * Getting involved in standards - 20 minutes
 * Questions and wrap up of the day
 17:00 - beers!!!
