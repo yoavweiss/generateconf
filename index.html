@@ -559,17 +559,6 @@
                     </aside>
                 </section>
                 <section>
-                    <pre><code data-trim data-noescape>
-&lt;img src="panda.jpg" 
-     srcset="<span class=highlight>panda200.jpg 200w</span>, 
-             panda400.jpg 400w, panda800.jpg 800w,
-             panda1200.jpg 1200w, panda2400.jpg 2400w"
-     alt="A panda."&gt;
-                    </code></pre>
-                    <aside class="notes">
-                    </aside>
-                </section>
-                <section>
                     <div class=imgcontainer>
                         <img src="resources/bg_1200_38.png">
                     </div>
@@ -816,18 +805,9 @@ sizes=<span class=highlight>"(max-width: 50em) 50vw,
                 </section>
                 <section>
                     <h1>'sizes' default value</h1>
-                    <pre><code data-trim data-noescape>
-&lt;img src="otherpic.jpg"
-     srcset="pic100.jpg 100w, pic200.jpg 200w"&gt;
-                    </code></pre>
-                    is identical to
-                    <pre><code data-trim data-noescape>
-&lt;img src="otherpic.jpg" <span class=highlight>sizes="100vw"</span>
-     srcset="pic100.jpg 100w, pic200.jpg 200w"&gt;
-                    </code></pre>
                     <aside class="notes">
                         When sizes is missing, the default value the browser will use to determine which resource to download and at what
-                        size to display it is '100vw'. (So the full width of the viewport)
+                        size to display it is '100vw'. (So the full width of the viewport) but you should not use it!
 
                     </aside>
                 </section>
